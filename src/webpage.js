@@ -8,7 +8,6 @@ function createHeader() {
   header.classList.add("header");
 
   header.appendChild(createTitle());
-  header.appendChild(createSlogan());
   header.appendChild(createNavBar());
 
   // header.appendChild(createNavBar());
@@ -25,6 +24,7 @@ function createTitle() {
   mainTitle.textContent = "Lucky Panda House";
 
   title.appendChild(mainTitle);
+  title.appendChild(createSlogan());
 
   return title;
 }
@@ -79,7 +79,6 @@ function createNavBar() {
 function createMain() {
   const main = document.createElement("div");
   main.classList.add("main");
-  main.textContent = "hello this is the main section";
 
   return main;
 }
@@ -101,4 +100,6 @@ export default function initializePage() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
+
+  loadHome();
 }
