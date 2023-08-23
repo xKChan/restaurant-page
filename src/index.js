@@ -1,1 +1,3 @@
-console.log("hello, whats");
+import initializePage from "./webpage";
+
+initializePage();
