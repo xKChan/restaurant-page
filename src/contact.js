@@ -1,7 +1,7 @@
-function createHome() {
+function createContact() {
   const home = document.createElement("div");
-  home.classList.add("home");
-  home.textContent = "Home Page";
+  home.classList.add("contact");
+  home.textContent = "Contact Page";
 
   return home;
 }
@@ -9,5 +9,5 @@ function createHome() {
 export default function loadHome() {
   const main = document.querySelector(".main");
   main.textContent = "";
-  main.appendChild(createHome());
+  main.appendChild(createContact());
 }

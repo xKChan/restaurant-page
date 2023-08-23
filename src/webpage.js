@@ -1,9 +1,13 @@
+import loadHome from "./home";
+
+// Create Header section
 function createHeader() {
   const header = document.createElement("div");
   header.classList.add("header");
 
   header.appendChild(createTitle());
   header.appendChild(createSlogan());
+  header.appendChild(createNavBar());
 
   // header.appendChild(createNavBar());
 
@@ -23,26 +27,59 @@ function createTitle() {
   return title;
 }
 
-// function createNavBar() {
-//   const navBar = document.createElement("div");
-//   navBar.classList.add("navbar");
-
-//   return navBar;
-// }
-
-function createMain() {
-  const main = document.createElement("div");
-  main.classList.add("main");
-
-  return main;
-}
-
 function createSlogan() {
   const slogan = document.createElement("h3");
   slogan.classList.add("slogan");
   slogan.textContent = "Venture into Authentic Chinese Flavors";
 
   return slogan;
+}
+
+function createNavBar() {
+  const navBar = document.createElement("div");
+  navBar.classList.add("navbar");
+
+  // Home Section
+  const homeButton = document.createElement("button");
+  homeButton.classList.add("homeButton");
+  homeButton.textContent = "Home";
+
+  homeButton.addEventListener("click", () => {
+    loadHome();
+  });
+
+  // Menu Section
+  const menuButton = document.createElement("button");
+  menuButton.classList.add("menuButton");
+  menuButton.textContent = "Menu";
+
+  menuButton.addEventListener("click", () => {
+    loadMenu();
+  });
+
+  // Contact Section
+  const contactButton = document.createElement("button");
+  contactButton.classList.add("contactButton");
+  contactButton.textContent = "Contact";
+
+  contactButton.addEventListener("click", () => {
+    loadContact();
+  });
+
+  navBar.appendChild(homeButton);
+  navBar.appendChild(menuButton);
+  navBar.appendChild(contactButton);
+
+  return navBar;
+}
+
+// Create Main Section
+function createMain() {
+  const main = document.createElement("div");
+  main.classList.add("main");
+  main.textContent = "hello this is the main section";
+
+  return main;
 }
 
 function createFooter() {
