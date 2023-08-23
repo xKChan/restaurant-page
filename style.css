@@ -12,13 +12,30 @@
 
 .header {
   display: grid;
-  grid-template-rows: 40px 40px;
-  justify-content: center;
-  align-self: center;
+  grid-template-columns: 1fr 2fr;
 }
 
 .title {
-  justify-self: center;
+  justify-self: start;
+  align-self: center;
+}
+
+.navbar {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+}
+
+.navbar button {
+  border: none;
+  font-size: 30px;
+  width: fit-content;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .footer {
