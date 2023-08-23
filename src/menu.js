@@ -1,12 +1,12 @@
 function createMenu() {
   const menu = document.createElement("div");
-  menu.classList.add("home");
+  menu.classList.add("menu");
   menu.textContent = "Menu Page";
 
-  return home;
+  return menu;
 }
 
-export default function loadHome() {
+export default function loadMenu() {
   const main = document.querySelector(".main");
   main.textContent = "";
   main.appendChild(createMenu());

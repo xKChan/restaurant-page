@@ -1,12 +1,12 @@
 function createContact() {
-  const home = document.createElement("div");
-  home.classList.add("contact");
-  home.textContent = "Contact Page";
+  const contact = document.createElement("div");
+  contact.classList.add("contact");
+  contact.textContent = "Contact Page";
 
-  return home;
+  return contact;
 }
 
-export default function loadHome() {
+export default function loadContact() {
   const main = document.querySelector(".main");
   main.textContent = "";
   main.appendChild(createContact());
