@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 120px 5fr 50px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 40px 40px;
+  justify-content: center;
+  align-self: center;
+}
+
+.title {
+  justify-self: center;
+}
+
+.footer {
+  line-height: 50px;
+  justify-self: center;
+}
