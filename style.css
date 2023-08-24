@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab", serif;
+}
+
+p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.main {
+  padding: 0 50px 150px;
+}
+
 .content {
   height: 100vh;
   display: grid;
@@ -13,6 +29,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  padding: 0px 20px 80px;
 }
 
 .title {
@@ -63,4 +80,48 @@ button:hover {
 .footer {
   line-height: 50px;
   justify-self: center;
+}
+
+/*  */
+/* Menu.JS */
+/*  */
+
+.menu h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+
+.menuContainer {
+  display: grid;
+  row-gap: 20px;
+}
+
+.menuContainer h3 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.menuItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.menuItem p {
+  justify-self: end;
+}
+
+.appitizerContainer {
+  display: grid;
+  row-gap: 10px;
+}
+
+.foodInfo p {
+  font-style: italic;
+  padding-left: 15px;
+}
+
+.price {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
 }
