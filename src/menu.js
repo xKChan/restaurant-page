@@ -17,42 +17,47 @@ function createMenu() {
   const appitizersTitle = document.createElement("h3");
   appitizersTitle.textContent = "Appitizers";
 
-  appitizers.appendChild(appitizersTitle);
-  appitizers.appendChild(
+  const appitizersContainer = document.createElement("div");
+  appitizersContainer.classList.add("appitizerContainer");
+
+  appitizersContainer.appendChild(
     createMenuItem(
       "YYC Tators",
       "Homemade tator tots deep fried in duck fat served with sour cream, green onions, bacon, and tomatoes",
       "$12.99"
     )
   );
-  appitizers.appendChild(
+  appitizersContainer.appendChild(
     createMenuItem(
       "Steak Bites",
       "AAA Albeta Beef cooked to perfection over an open fire.  Served with homemade steak sauce",
       "$14.99"
     )
   );
-  appitizers.appendChild(
+  appitizersContainer.appendChild(
     createMenuItem(
       "Potato Skins",
       "Crispy, golden potato skins fried in duck fat topped with bacon, green onions, and our special house blend of cheese.  Served with sour cream and salsa on the side",
       "$8.99"
     )
   );
-  appitizers.appendChild(
+  appitizersContainer.appendChild(
     createMenuItem(
       "Death Poppers",
       "Little poppers that will melt your mouth.  These poppers are stuffed with mozzarealla and Carolina Reapers.",
       "$14.99"
     )
   );
-  appitizers.appendChild(
+  appitizersContainer.appendChild(
     createMenuItem(
       "Chicken Wings",
       "10 Flavours to pick from: Honey Garlic, BBQ, Greek, Salt & Pepper, Lemon Pepper, Spicy, Blazin hot, Honey Hot, Smokey, and Original.  Served with a side of ranch and carrots",
       "$14.99"
     )
   );
+
+  appitizers.appendChild(appitizersTitle);
+  appitizers.appendChild(appitizersContainer);
 
   const bbq = document.createElement("div");
   bbq.classList.add("bbq");
@@ -137,7 +142,10 @@ function createMenu() {
 
 function createMenuItem(name, description, price) {
   const menuItem = document.createElement("div");
-  menuItem.classList.add("menu" + itemNum);
+  menuItem.classList.add("menuItem");
+
+  const foodInfo = document.createElement("div");
+  foodInfo.classList.add("foodInfo");
 
   const foodTitle = document.createElement("h4");
   foodTitle.textContent = name;
@@ -146,10 +154,12 @@ function createMenuItem(name, description, price) {
   foodDescription.textContent = description;
 
   const foodPrice = document.createElement("p");
+  foodPrice.classList.add("price");
   foodPrice.textContent = price;
 
-  menuItem.appendChild(foodTitle);
-  menuItem.appendChild(foodDescription);
+  foodInfo.appendChild(foodTitle);
+  foodInfo.appendChild(foodDescription);
+  menuItem.appendChild(foodInfo);
   menuItem.appendChild(foodPrice);
 
   itemNum++;
@@ -158,6 +168,7 @@ function createMenuItem(name, description, price) {
 }
 
 export default function loadMenu() {
+  itemNum = 1;
   const main = document.querySelector(".main");
   main.textContent = "";
   main.appendChild(createMenu());

@@ -8,7 +8,7 @@ function createContact() {
   contactUs.appendChild(contactTitle);
   contactUs.appendChild(createInfo("Phone Number: ", "123-456-7890"));
   contactUs.appendChild(
-    createInfo("Email Address: ", "KCSmokehouse@gmail.com")
+    createInfo("Email Address: ", "YYCsmokehouse@gmail.com")
   );
 
   const hours = document.createElement("div");

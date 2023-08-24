@@ -21,7 +21,7 @@ function createTitle() {
 
   const mainTitle = document.createElement("h1");
   mainTitle.classList.add("restaurant-name");
-  mainTitle.textContent = "KC SmokeHouse";
+  mainTitle.textContent = "YYC SmokeHouse";
 
   title.appendChild(mainTitle);
   title.appendChild(createSlogan());
