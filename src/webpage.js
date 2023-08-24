@@ -21,7 +21,7 @@ function createTitle() {
 
   const mainTitle = document.createElement("h1");
   mainTitle.classList.add("restaurant-name");
-  mainTitle.textContent = "Lucky Panda House";
+  mainTitle.textContent = "KC SmokeHouse";
 
   title.appendChild(mainTitle);
   title.appendChild(createSlogan());
@@ -32,7 +32,7 @@ function createTitle() {
 function createSlogan() {
   const slogan = document.createElement("h3");
   slogan.classList.add("slogan");
-  slogan.textContent = "Venture into Authentic Chinese Flavors";
+  slogan.textContent = "Best BBQ in Town";
 
   return slogan;
 }
