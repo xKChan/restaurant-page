@@ -5,11 +5,20 @@ function createContact() {
   contactUs.classList.add("contactUs");
   const contactTitle = document.createElement("h2");
   contactTitle.textContent = "CONTACT US";
-  contactUs.appendChild(contactTitle);
-  contactUs.appendChild(createInfo("Phone Number: ", "123-456-7890"));
-  contactUs.appendChild(
+
+  const contactusInfo = document.createElement("div");
+  contactusInfo.classList.add("contactusInfo");
+
+  contactusInfo.appendChild(createInfo("Phone Number: ", "123-456-7890"));
+  contactusInfo.appendChild(
     createInfo("Email Address: ", "YYCsmokehouse@gmail.com")
   );
+  contactusInfo.appendChild(
+    createInfo("Address: ", "225 6 St SW, Calgary, AB T2P 3S1")
+  );
+
+  contactUs.appendChild(contactTitle);
+  contactUs.appendChild(contactusInfo);
 
   const hours = document.createElement("div");
   hours.classList.add("hours");
@@ -21,6 +30,13 @@ function createContact() {
   const dates = document.createElement("div");
   dates.classList.add("dates");
 
+  const locationContainer = document.createElement("div");
+  locationContainer.classList.add("locationContainer");
+
+  const location = document.createElement("img");
+  location.classList.add("location");
+  location.src = "../dist/imgs/location.png";
+
   dates.appendChild(dayHours("Monday", "1:00PM", "10:00PM"));
   dates.appendChild(dayHours("Tuesday", "1:00PM", "10:00PM"));
   dates.appendChild(dayHours("Wednesday", "1:00PM", "10:00PM"));
@@ -31,7 +47,10 @@ function createContact() {
 
   hours.appendChild(dates);
 
+  locationContainer.appendChild(location);
+
   contact.appendChild(contactUs);
+  contact.appendChild(locationContainer);
   contact.appendChild(hours);
 
   // Fix Whitespace Error
@@ -51,8 +70,7 @@ function dayHours(day, open, close) {
 
 function createInfo(label, text) {
   const createP = document.createElement("p");
-  createP.classList.add(text);
-  createP.textContent = `${label} ${text}`;
+  createP.textContent = label + text;
 
   return createP;
 }
