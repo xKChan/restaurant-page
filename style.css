@@ -20,8 +20,16 @@ p {
   font-weight: 300;
 }
 
+.header,
+.footer {
+  background-color: #b91c1c;
+}
+
+.slogan {
+}
+
 .main {
-  padding: 0 50px 150px;
+  padding: 20px 50px 150px;
 }
 
 .content {
@@ -33,7 +41,7 @@ p {
 .header {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 0px 20px 80px;
+  padding: 0px 20px 10px;
 }
 
 .title {
@@ -57,6 +65,7 @@ p {
 
 button:hover {
   cursor: pointer;
+  color: #fee2e2;
 }
 
 .contactContainer {
@@ -74,6 +83,7 @@ button:hover {
 .footer {
   line-height: 50px;
   justify-self: center;
+  width: 100vw;
 }
 
 /*  */
@@ -153,4 +163,12 @@ button:hover {
   align-self: center;
   height: 250px;
   row-gap: 10px;
+}
+
+/*  */
+/* Footer */
+/*  */
+
+.footer {
+  text-align: center;
 }
