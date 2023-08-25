@@ -1,6 +1,7 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
 import loadContact from "./contact";
+import "./style.css";
 
 // Create Header section
 function createHeader() {

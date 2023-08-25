@@ -1,3 +1,6 @@
+import img from "./imgs/location.png";
+import "./style.css";
+
 function createContact() {
   const contact = document.createElement("div");
   contact.classList.add("contactContainer");
@@ -33,9 +36,9 @@ function createContact() {
   const locationContainer = document.createElement("div");
   locationContainer.classList.add("locationContainer");
 
-  const location = document.createElement("img");
+  const location = new Image();
   location.classList.add("location");
-  location.src = "dist/imgs/location.png";
+  location.src = img;
 
   dates.appendChild(dayHours("Monday", "1:00PM", "10:00PM"));
   dates.appendChild(dayHours("Tuesday", "1:00PM", "10:00PM"));

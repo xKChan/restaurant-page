@@ -1,4 +1,5 @@
 let itemNum = 1;
+import "./style.css";
 
 function createMenu() {
   const menu = document.createElement("div");
