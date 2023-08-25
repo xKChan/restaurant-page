@@ -44,7 +44,7 @@ function createMenu() {
   appitizersContainer.appendChild(
     createMenuItem(
       "Death Poppers",
-      "Little poppers that will melt your mouth.  These poppers are stuffed with mozzarealla and Carolina Reapers.",
+      "Little poppers that will melt your mouth.  These poppers are stuffed with mozzarella and Carolina Reapers.",
       "$14.99"
     )
   );
