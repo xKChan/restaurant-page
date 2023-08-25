@@ -35,7 +35,7 @@ function createContact() {
 
   const location = document.createElement("img");
   location.classList.add("location");
-  location.src = "../src/imgs/location.png";
+  location.src = "dist/imgs/location.png";
 
   dates.appendChild(dayHours("Monday", "1:00PM", "10:00PM"));
   dates.appendChild(dayHours("Tuesday", "1:00PM", "10:00PM"));

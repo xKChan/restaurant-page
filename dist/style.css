@@ -95,7 +95,7 @@ button:hover {
 .homeContainer {
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
-  background-image: url(../src/imgs/meal.jpg);
+  background-image: url(./imgs/meal.jpg);
   height: 700px;
   opacity: 0.85;
 }
